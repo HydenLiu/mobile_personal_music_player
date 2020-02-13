@@ -1,0 +1,291 @@
+html {
+  font-size: 100px;
+}
+.bgBox {
+  width: 100%;
+  background: #161824 url("../img/bg.jpg") no-repeat;
+  background-position: 50%;
+  background-size: auto 100%;
+  transform: scale(1.5);
+  transform-origin: center top;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: opacity 0.3s linear;
+  z-index: 1;
+}
+.bgBox::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bodyBox {
+  width: 100%;
+  height: 5.55rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.bodyer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.55rem;
+}
+.bodyer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.6rem;
+  z-index: 5;
+  width: 0.96rem;
+  height: 1.37rem;
+  background: url("../img/needle.png") no-repeat;
+  background-size: contain;
+}
+.pic {
+  width: 2.96rem;
+  height: 2.96rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0.7rem auto 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.pic::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  background: url("../img/light.png") no-repeat;
+  background-size: contain;
+}
+.rotate {
+  animation: name 3s linear infinite;
+}
+@keyframes name {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pic1 {
+  width: 1.84rem;
+  height: 1.84rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+}
+.pic2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.control {
+  width: 100%;
+  height: 1.1rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.text {
+  padding: 0 0.35rem;
+  margin-top: 0.25rem;
+}
+.txtH3 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.18rem;
+  line-height: 1.1;
+  color: #fefefe;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.songScroll {
+  width: 3.05rem;
+  height: 1rem;
+  font-size: 0.16rem;
+  text-align: center;
+  margin: 0.14rem auto 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.songScroll div {
+  width: 100%;
+  height: 0.16rem;
+  font-size: 0.14rem;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0.6;
+}
+.songScroll div#er {
+  opacity: 1;
+}
+.addSup {
+  width: 3rem;
+  height: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.12rem;
+  color: #fff;
+}
+.left {
+  width: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left img {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.right {
+  width: 0.4rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.right img {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.bar {
+  width: 3.3rem;
+  height: 0.1rem;
+  margin: 0.05rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+}
+.barCenter {
+  width: 2.6rem;
+  height: 0.05rem;
+  background: #666;
+  margin: 0 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 0.05rem;
+}
+.barMini {
+  width: 0%;
+  height: 100%;
+  border-radius: 0.05rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+.barMini::after {
+  content: "";
+  width: 0.12rem;
+  height: 0.12rem;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.more {
+  width: 100%;
+  height: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.volume {
+  height: 100%;
+  width: 1.5rem;
+  padding: 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yl {
+  width: 0.3rem;
+  height: 0.3rem;
+  background: url("../img/yl.png") no-repeat center / 100%;
+}
+.ylBar {
+  width: 0.5rem;
+  height: 0.05rem;
+  border-radius: 0.05rem;
+  background: #666;
+}
+.yBar {
+  width: 50%;
+  height: 0.05rem;
+  border-radius: 0.05rem;
+  background: #fff;
+}
+.play {
+  width: 0.75rem;
+  height: 100%;
+  background: url("../img/play2.png") no-repeat center / 80%;
+}
+.replay {
+  width: 0.75rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.times {
+  width: 0.75rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.twoTime {
+  width: 0.5rem;
+  height: 0.3rem;
+  text-align: center;
+  line-height: 0.3rem;
+  font-size: 0.12rem;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0.15rem;
+}
+.replay2 {
+  width: 0.5rem;
+  height: 0.3rem;
+  text-align: center;
+  line-height: 0.3rem;
+  font-size: 0.12rem;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0.15rem;
+}
+/*# sourceMappingURL=style.css.map */
